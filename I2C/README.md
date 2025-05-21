@@ -1,5 +1,3 @@
----
-
 # 🧠 About This Experiment
 
 This sub-project demonstrates how **I2C (Inter-Integrated Circuit)** communication works between two Arduino boards: one acting as the **Master** and the other as the **Slave**. It includes test scripts to verify the communication flow and a Python script to facilitate serial or hardware-based communication from a PC or Raspberry Pi.
