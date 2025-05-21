@@ -1,85 +1,113 @@
-# NightWalkie  🕶 
+# NightWalkie 🕶️
 
-### Path to reach my Idea: 🚀 
+A wearable obstacle detection system inspired by echolocation — designed for walking in the dark or assisting visually impaired individuals.
 
-I observed that it takes time for our pupil to adjust to the dark, this device would be an instant soultion if developed with proper budget. Furthermore, it can be extended to help blind move _(indoors or short distances)_.
+---
 
-### Overview: 🎓
-It is a first phase idea to use the concept of obsticle avoidance for the blind and for the people who wanna walk in dark. The design is inspired by 'BAT'. Where it uses a special property called 'echolocation'. Similarly, the design has an ultrasonic sensors placed as a design of spectacles with a servo attached that revolve continuously around an axis and the sensor collects the required data. Here the time period of the signal to reach the receiver is taken as the raw data that we need and is given as input to a piezoelectric buzzer placed near the ears. We know that f = 1/T, Hence if obstacles are far away then the time period (T) is high thereby producing a sound of lower frequency (f) and as we approach the obstacle the sound would be of higher frequency thereby differentiating whether we are approaching any obstacle in front.
+## 🚀 Inspiration
 
-![IMG_20210904_233921](https://user-images.githubusercontent.com/69350191/132105486-72b24200-c684-4f67-ad67-284dfd402e0c.jpg)
+NightWalkie was born from the simple idea: **our eyes take time to adjust in the dark**. This device offers an instant solution using ultrasonic sensors and buzzers to guide users with audio cues — making it useful in blackout conditions or short-range navigation for the blind.
 
-### Project Requriements: 🛠
-_(These Materials that are listed are of my choice conisedering the budget you can afford and try exploring the use of balsa wood for making the sensor mount)_
+Inspired by how bats use **echolocation**, the system converts distance data into sound frequency — the closer the object, the higher the pitch of the sound.
 
-###### Specticles (Can choose any as per your style and comfort)
-- [Link for specticles](https://www.lenskart.com/matte-black-grey-full-rim-wayfarer-shape-small-size-49-50-vincent-chase-nomades-vc-5147-p-c100-polarized-sunglasses.html?utm_source=google&utm_medium=cpc&utm_campaign=Google-PLA-StdShopping-Sunglasses-120720&gclid=Cj0KCQjwssyJBhDXARIsAK98ITQW7GZibX6_RXqXJ_P6L_i_ZHvsPU6tNRngf8zOK6AdHDw07OwViPoaAudgEALw_wcB)
+---
 
-###### Nano/Uno 
-- [Link for Nano 33 BLE sense](https://robu.in/product/original-arduino-nano-33-ble-sense/)
-- [Link for Arduino UNO](https://robu.in/product/arduino-uno-r3/)
+## 🎓 Project Overview
 
-###### Jumper wires 
-- [Link for Jumper wires](https://robu.in/product/20-cm-dupont-cable-male-male-male-female-female-female-combo/)
+The device uses:
+- An **ultrasonic sensor** mounted on a **servo** to scan surroundings.
+- **Buzzers** to provide directional feedback:
+  - 🔊 Left buzzer → Obstacle on the right (move left)
+  - 🔊 Right buzzer → Obstacle on the left (move right)
+  - 🔊 Both buzzers → Obstacle ahead (turn around)
+  - ❌ No sound → Path is clear
 
-###### Servo
-- [Link for Servo](https://robu.in/product/standard-servo-towerpro-sg-5010-5010/)
+The formula `f = 1/T` is applied, where:
+- `T` = time taken for signal to reflect back
+- `f` = frequency of buzzer sound
 
-###### Ultrasonic sensor 
-- [Link for Ultrasonic Sensor](https://robu.in/product/hc-sr04-ultrasonic-range-finder-cartoon-ultrasonic-sensor-mounting-bracket/)
+---
 
-###### Buzzers (2)
-- [Link for Buzzers](https://robu.in/product/5v-passive-buzzer/)
+## 🧑‍💻 Author
 
-###### Solidering System (Optional)
-- Used to connect any prototype wires once the desgin is finalised and ready to use it extensively. Can buy in nearby electronics shop
+- **Name:** Karthik Gogisetty  
+- **College:** Manipal Institute of Technology  
+- **Year:** Third
 
-###### Card Board 
-- To make personalised Ultrasonic sensor mount, Can use the materials in home to save your expenses.
+---
 
-###### 9V battery with connector 
-- [Link for Battery connector](https://robu.in/product/9v-battery-snap-connector-dc-jackbattery-connector-cap/)
-- [Link for 9V Battery](https://robu.in/product/9v-original-hw-high-quality-battery-5pcs/)
+## 🛠️ Requirements
 
-#### Sensor Mount:
-This is used to fix an ultrasonic sensor on the servo which is used to increase the field of vision of the ultrasonics sensor by giving it a command to sweep for few degrees around its axis for a specific period of time. 
-_(Reference is taken from TinkerCAD files.)_
+| Component               | Description/Link |
+|------------------------|------------------|
+| Spectacles             | [Lenskart](https://www.lenskart.com/...) |
+| Arduino Nano/UNO       | [Nano](https://robu.in/product/original-arduino-nano-33-ble-sense/) / [UNO](https://robu.in/product/arduino-uno-r3/) |
+| Jumper Wires           | [Buy](https://robu.in/product/20-cm-dupont-cable-male-male-male-female-female-female-combo/) |
+| Servo Motor            | [SG-5010](https://robu.in/product/standard-servo-towerpro-sg-5010-5010/) |
+| Ultrasonic Sensor      | [HC-SR04](https://robu.in/product/hc-sr04-ultrasonic-range-finder-cartoon-ultrasonic-sensor-mounting-bracket/) |
+| Buzzers (x2)           | [5V Passive](https://robu.in/product/5v-passive-buzzer/) |
+| 9V Battery + Connector | [Battery](https://robu.in/product/9v-original-hw-high-quality-battery-5pcs/), [Connector](https://robu.in/product/9v-battery-snap-connector-dc-jackbattery-connector-cap/) |
+| Eye Gel Mask (optional)| [Buy](https://www.amazon.in/Gel-Relaxing-Eye-Mask-Sleeping/dp/B08KG3ZYNC/) |
 
-![image](https://user-images.githubusercontent.com/69350191/132105227-fa828fde-6a25-4928-a857-73b36f14dbd8.png)
+---
 
-### Procedure: 🗒️
-- Understood the working principle of ultrasonic sensor and coded in IDE. 
-- Learnt how to use servo and tune it as per our requriements and coded in IDE. 
-- Started solidering the requried components like buzzers. 
-- Tested if buzzers are working for certain random frequencies.
-- Now, Used the concept of obsticle avoidance in the code using the sensor data - Distance and finalised my code and its working on bread board
-- We can clearly observe in code that i created functions that i want to use, which is a organised way to code and debug.
-- Have set a distance beyond which the buzzers wont beep in order to indicate users that they are at safe zone.
-- If the 1/T concept is not working or is not proper, users can tune the commands in the code for left and right turn indication to their comfortable frequency before uploading the code to the build
+## 🛠️ Sensor Mount
 
-![IMG_20210904_233948](https://user-images.githubusercontent.com/69350191/132105896-22f7effb-887f-4abe-a523-8346ede5c011.jpg)
+Create a custom sensor mount using cardboard or balsa wood to hold the ultrasonic sensor and servo in alignment. Example:
 
-### Device Instructions: 👇🏻 
-- Left buzzer gives indication to move left  
-- Right buzzer for right  
-- Two buzzers for 180 degree shift
-- No buzzer beeps if there isn't any obsticle in the set distance range
+![Sensor Mount](https://user-images.githubusercontent.com/69350191/132105227-fa828fde-6a25-4928-a857-73b36f14dbd8.png)
 
-### Ethics in modeling prototype: ✔️
-In order to provide users best experience using the device. An _(eye-gel)_ mask can be attached to the rare side of the specticles.
-[Link for eye-gel mask](https://www.amazon.in/Gel-Relaxing-Eye-Mask-Sleeping/dp/B08KG3ZYNC/ref=asc_df_B08KG3ZYNC/?tag=googleshopdes-21&linkCode=df0&hvadid=396985008660&hvpos=&hvnetw=g&hvrand=17217870604681999440&hvpone=&hvptwo=&hvqmt=&hvdev=c&hvdvcmdl=&hvlocint=&hvlocphy=9062134&hvtargid=pla-977512920935&psc=1&ext_vrnc=hi)
+---
 
-![image](https://user-images.githubusercontent.com/69350191/132106659-a3c1cc29-7ec4-4015-a3af-6bdb7475b47f.png)
+## 🗒️ Build Procedure
 
-##### Why an eye-gel mask?
-It relieves eye tiredness, dry eyes, eye and head aches, restlessness, insomnia. Which provides users to relax and use the device as there is a possibility that users get annoyed with the sound of buzzer and moving mechanical parts of the prototype.
+1. Coded and tested ultrasonic sensor readings in Arduino IDE.
+2. Integrated servo sweep logic for environmental scanning.
+3. Attached buzzers and validated tone changes with proximity.
+4. Created `checkDirection()` to decide motion logic.
+5. Coded clean modular functions for distance and direction detection.
+6. Set safety thresholds for buzzer inactivity.
+7. Tuned feedback based on user comfort.
 
-### Future Scope: 🦾
-As of now, the protype is promising and basic and has a scope to be improved in its mechanical and electronics aspects.
-- The existing prototype can be improved with the use of Raspberry Pi and bluetooth module. Where voice instructions can be given to the users to either go left, right, straight or a 180 degree shit. The use of bluetooth comes to play if we want our voice outputs to be given to our earpods and so on.
-[Link for Bluetooth Audio with RPi](https://magpi.raspberrypi.org/articles/bluetooth-audio-raspberry-pi-3)
-- Balsa or any rigid materials that are feasible can be used to have a mount for Ultrasonic sensor and nano in order to use the device more comfortablly.
-- The program as of now is inspired from a obsticle avoidance car concept the code can also be tuned and made more optimum 
+---
 
-###### Hope you all enjoyed and are inspired by nightwalkiee! 
-###### _(Thankyou for your valuable time)_.
+## 📋 Device Instructions
+
+- 🔊 **Left buzzer** → move left  
+- 🔊 **Right buzzer** → move right  
+- 🔊 **Both buzzers** → turn around  
+- ❌ **No buzzer** → path is clear
+
+---
+
+## ✅ Ethics & Comfort
+
+Add a soft **eye-gel mask** to reduce eye strain or distraction from mechanical noise, ensuring user comfort during use.
+
+![Eye Gel Mask](https://user-images.githubusercontent.com/69350191/132106659-a3c1cc29-7ec4-4015-a3af-6bdb7475b47f.png)
+
+---
+
+## 🦾 Future Scope
+
+- Add **voice feedback** with Raspberry Pi
+- Integrate **Bluetooth** to stream audio to earphones
+- Replace cardboard mount with rigid **3D-printed or balsa** structure
+- Optimize scanning and response logic
+- Create a compact wearable PCB design
+
+🔗 [Bluetooth Audio on Raspberry Pi](https://magpi.raspberrypi.org/articles/bluetooth-audio-raspberry-pi-3)
+
+---
+
+## 📸 Prototype Images
+
+![Prototype](https://user-images.githubusercontent.com/69350191/132105486-72b24200-c684-4f67-ad67-284dfd402e0c.jpg)
+![Breadboard Test](https://user-images.githubusercontent.com/69350191/132105896-22f7effb-887f-4abe-a523-8346ede5c011.jpg)
+
+---
+
+## 🙌 Closing Note
+
+> **Hope NightWalkie inspires your next wearable invention!**  
+> _Thank you for your valuable time._
